@@ -1,0 +1,24 @@
+Package: testcolourpicker
+Type: Package
+Title: What the Package Does (Title Case)
+Version: 0.1.0
+Authors@R: c(
+  person("Emanuel", "Huber", email = "emanuel.huber@pm.me",
+  role = c("aut", "cre")))
+Author: Emanuel Huber
+Maintainer: Emanuel Huber <emanuel.huber@pm.me>
+Description: Package created to test the use of the colourpicker package
+ in a package
+License:  GPL (>= 2)
+Encoding: UTF-8
+LazyData: true
+Depends: 
+    base,
+    R (>= 2.10)
+Imports:
+    shiny,
+	  colourpicker,
+	  utils
+RoxygenNote: 7.2.3
+ByteCompile: true
+

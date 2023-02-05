@@ -13,8 +13,29 @@ library(testcolourpicker)
 testcolourpicker::runApp()
 
 ```
+## Workaround 1
 
-## Workaround
+**Use the dev version from github**
+```r
+if(!require("devtools")) install.packages("devtools")
+devtools::install_github("daattali/colourpicker")
+devtools::install_github("emanuelhuber/nimoT")
+# library(shiny)
+# library(colourpicker)
+library(nimoT)
+
+addResourcePath("colourpicker-lib/js",
+                system.file("www/shared/colourpicker/js", package="colourpicker"))
+addResourcePath("colourpicker-lib/css",
+                system.file("www/shared/colourpicker/css",package="colourpicker"))
+addResourcePath("colourpicker-binding",
+                system.file("srcjs",package="colourpicker"))
+
+
+runNimoT()
+```
+
+## Workaround 2
 
 **Restart R**
 

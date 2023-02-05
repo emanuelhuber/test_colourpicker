@@ -17,8 +17,7 @@ Depends:
     R (>= 2.10)
 Imports:
     shiny,
-	  colourpicker,
-	  utils
+	  colourpicker
 RoxygenNote: 7.2.3
 ByteCompile: true
 

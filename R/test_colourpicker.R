@@ -21,7 +21,7 @@
 #' @export
 #'
 #' @return shiny application object
-testcolourpicker <- function(...) {
+runApp <- function(...) {
   shinyApp(ui = shinyAppUI, server = shinyAppServer, ...)
 }
 

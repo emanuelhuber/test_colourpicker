@@ -2,19 +2,46 @@
 
 Package to test the utilization of `colourpicker` in a package
 
-# Run the package
+# Run the package 
+
+## Does not work
 
 ```r
 if(!require("devtools")) install.packages("devtools")
 devtools::install_github("emanuelhuber/testcolourpicker")
 library(testcolourpicker)
-testcolourpicker()
+testcolourpicker::runApp()
+
+```
+
+## Workaround
+
+**Restart R**
+
+```r
+if(!require("devtools")) install.packages("devtools")
+devtools::install_github("emanuelhuber/testcolourpicker")
+library(testcolourpicker)
+
+shiny::addResourcePath("colourpicker-lib/js",
+                system.file("www/shared/colourpicker/js", package="colourpicker"))
+shiny::addResourcePath("colourpicker-lib/css",
+                system.file("www/shared/colourpicker/css",package="colourpicker"))
+shiny::addResourcePath("colourpicker-binding",
+                system.file("srcjs",package="colourpicker"))
+                
+testcolourpicker::runApp()
 
 ```
 
 # Run the functions
 
+**Restart R**
+
+
 ```r
+library(shiny)
+library(colourpicker)
 
 # Define UI for application that draws a histogram
 shinyAppUI <- fluidPage(
